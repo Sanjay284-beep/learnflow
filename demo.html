@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watch Demo — LearnFlow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .demo-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 4vw 4rem;
+    }
+
+    /* ── REAL VIDEO EMBED (16:9 responsive) ── */
+    .video-player {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 ratio — makes it responsive */
+      height: 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .video-caption {
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .video-caption-title { font-weight: 600; font-size: 0.9rem; }
+    .video-caption-sub   { color: var(--muted); font-size: 0.8rem; }
+    .yt-badge {
+      display: flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,0,0,0.1);
+      border: 1px solid rgba(255,0,0,0.2);
+      color: #ff4444;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 100px;
+    }
+
+    /* ── CHAPTERS ── */
+    .chapters { margin-bottom: 3rem; }
+    .chapter-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: 1px solid transparent;
+    }
+    .chapter-item:hover  { background: var(--surface); border-color: var(--border); }
+    .chapter-item.active { background: var(--surface); border-color: rgba(200,240,77,0.2); }
+    .chapter-num {
+      width: 36px; height: 36px;
+      background: var(--surface2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700;
+      color: var(--muted); flex-shrink: 0;
+    }
+    .chapter-item.active .chapter-num { background: var(--accent); color: #0a0a0f; }
+    .chapter-title { font-weight: 600; font-size: 0.9rem; }
+    .chapter-dur   { color: var(--muted); font-size: 0.8rem; margin-top: 0.2rem; }
+    .chapter-check { margin-left: auto; color: var(--accent); font-size: 1rem; }
+
+    /* ── CTA ── */
+    .demo-cta {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .demo-cta h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem; font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .demo-cta p  { color: var(--muted); margin-bottom: 1.5rem; font-weight: 300; }
+    .demo-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Learn<span class="logo-dot">Flow</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="signup.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="demo-page">
+    <p class="section-label">Platform Demo</p>
+    <h1 class="section-title" style="margin-bottom:0.5rem">See LearnFlow in action</h1>
+    <p class="section-sub" style="margin-bottom:2.5rem">A full walkthrough of the platform — courses, labs, progress tracking, and more.</p>
+
+    <div class="video-player reveal">
+      <div class="video-wrapper">
+          <iframe
+          src="https://www.youtube.com/embed/ysEN5RaKOlA?rel=0&modestbranding=1"
+          title="LearnFlow Platform Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-caption">
+        <div>
+          <div class="video-caption-title">LearnFlow — Full Platform Walkthrough</div>
+          <div class="video-caption-sub">Frontend Development · Watch on YouTube</div>
+        </div>
+        <div class="yt-badge">▶ YouTube</div>
+      </div>
+    </div>
+
+    <div class="chapters reveal">
+      <h2 class="section-title" style="font-size:1.4rem; margin-bottom:1.5rem">Video Chapters</h2>
+      <div class="chapter-item active" onclick="setActive(this)">
+        <div class="chapter-num">1</div>
+        <div><div class="chapter-title">Welcome to LearnFlow</div><div class="chapter-dur">0:00 — 0:45</div></div>
+        <span class="chapter-check">✓</span>
+      </div>
+      <div class="chapter-item" onclick="setActive(this)">
+        <div class="chapter-num">2</div>
+        <div><div class="chapter-title">Browsing & Enrolling in Courses</div><div class="chapter-dur">0:45 — 1:30</div></div>
+      </div>
+      <div class="chapter-item" onclick="setActive(this)">
+        <div class="chapter-num">3</div>
+        <div><div class="chapter-title">The Live Coding Lab</div><div class="chapter-dur">1:30 — 2:45</div></div>
+      </div>
+      <div class="chapter-item" onclick="setActive(this)">
+        <div class="chapter-num">4</div>
+        <div><div class="chapter-title">Tracking Your Progress</div><div class="chapter-dur">2:45 — 3:30</div></div>
+      </div>
+      <div class="chapter-item" onclick="setActive(this)">
+        <div class="chapter-num">5</div>
+        <div><div class="chapter-title">Getting Your Certificate</div><div class="chapter-dur">3:30 — 4:32</div></div>
+      </div>
+    </div>
+
+    <div class="demo-cta reveal">
+      <h3>Ready to start learning?</h3>
+      <p>Join 50,000+ learners. Your first course is completely free.</p>
+      <div class="demo-cta-btns">
+        <a href="signup.html" class="btn-primary">Create Free Account →</a>
+        <a href="courses.html" class="btn-ghost">Browse Courses</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" class="logo">Learn<span class="logo-dot">Flow</span></a>
+    <ul class="footer-links">
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 LearnFlow. Made with ♥</div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const spans = hamburger.querySelectorAll('span');
+      if (navLinks.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+      } else {
+        spans[0].style.transform = spans[2].style.transform = '';
+        spans[1].style.opacity = '';
+      }
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => obs.observe(el));
+
+    function setActive(el) {
+      document.querySelectorAll('.chapter-item').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnFlow — Learn Without Limits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="logo">Learn<span class="logo-dot">Flow</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="signup.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">🚀 &nbsp;10,000+ learners enrolled</div>
+        <h1 class="hero-title">Learn Without<br /><em>Limits</em></h1>
+        <p class="hero-sub">Master in-demand skills with expert-led courses, real projects, and a community that actually cares about your growth.</p>
+        <div class="hero-actions">
+          <a href="courses.html" class="btn-primary">Explore Courses →</a>
+          <a href="demo.html" class="btn-ghost">▶ Watch Demo</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-avatar">👤</div>
+            <div>
+              <div class="card-name">Arjun Mehta</div>
+              <div class="card-role">Frontend Dev Track</div>
+            </div>
+          </div>
+          <div class="progress-list">
+            <div class="progress-item">
+              <div class="progress-label"><span>HTML & CSS Basics</span><span>100%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label"><span>JavaScript Essentials</span><span>78%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label"><span>React Fundamentals</span><span>42%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width:42%"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label"><span>Capstone Project</span><span>10%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badge fb1">🏆 &nbsp;Certificate Earned!</div>
+        <div class="floating-badge fb2">⚡ &nbsp;Streak: 21 days</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-row reveal">
+    <div class="stat-item">
+      <span class="stat-num">50K+</span>
+      <div class="stat-label">Active Learners</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">200+</span>
+      <div class="stat-label">Expert Courses</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">94%</span>
+      <div class="stat-label">Completion Rate</div>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="courses-header reveal">
+      <div>
+        <p class="section-label">Trending Now</p>
+        <h2 class="section-title">Top Courses</h2>
+        <p class="section-sub">Handpicked courses built for real-world outcomes, not just certificates.</p>
+      </div>
+      <a href="courses.html" class="btn-ghost" style="white-space:nowrap">View all courses →</a>
+    </div>
+    <div class="courses-grid">
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-1"><div class="course-tag">Bestseller</div>⚛️</div>
+        <div class="course-body">
+          <div class="course-title">React & Next.js Masterclass</div>
+          <div class="course-desc">Build production-ready apps with the most popular frontend stack.</div>
+          <div class="course-meta"><span class="course-rating">★★★★★ 4.9</span><span class="course-students">12.4k students</span></div>
+        </div>
+      </a>
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-2"><div class="course-tag">New</div>🟨</div>
+        <div class="course-body">
+          <div class="course-title">JavaScript: Zero to Hero</div>
+          <div class="course-desc">Deep dive into modern JS, async patterns, and browser APIs.</div>
+          <div class="course-meta"><span class="course-rating">★★★★★ 4.8</span><span class="course-students">8.1k students</span></div>
+        </div>
+      </a>
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-3"><div class="course-tag">Hot</div>🎨</div>
+        <div class="course-body">
+          <div class="course-title">UI/UX Design for Developers</div>
+          <div class="course-desc">Learn design systems, Figma, and UX principles that make users love your product.</div>
+          <div class="course-meta"><span class="course-rating">★★★★☆ 4.7</span><span class="course-students">6.9k students</span></div>
+        </div>
+      </a>
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-4"><div class="course-tag">Popular</div>🐍</div>
+        <div class="course-body">
+          <div class="course-title">Python for Data Science</div>
+          <div class="course-desc">Pandas, NumPy, and Matplotlib — your data science starter pack.</div>
+          <div class="course-meta"><span class="course-rating">★★★★★ 4.9</span><span class="course-students">15.2k students</span></div>
+        </div>
+      </a>
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-5"><div class="course-tag">Free</div>☁️</div>
+        <div class="course-body">
+          <div class="course-title">Cloud Fundamentals: AWS</div>
+          <div class="course-desc">Get AWS certified with this free intro to cloud computing.</div>
+          <div class="course-meta"><span class="course-rating">★★★★☆ 4.6</span><span class="course-students">9.3k students</span></div>
+        </div>
+      </a>
+      <a href="#" class="course-card reveal">
+        <div class="course-thumb thumb-6"><div class="course-tag">Advanced</div>🤖</div>
+        <div class="course-body">
+          <div class="course-title">AI & Prompt Engineering</div>
+          <div class="course-desc">Build AI-powered products and master prompting for real use cases.</div>
+          <div class="course-meta"><span class="course-rating">★★★★★ 5.0</span><span class="course-students">4.2k students</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="features-inner">
+      <div class="features-header reveal">
+        <p class="section-label">Why LearnFlow</p>
+        <h2 class="section-title">Everything you need<br />to actually level up</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-purple">🎯</div>
+          <div class="feature-title">Structured Learning Paths</div>
+          <div class="feature-desc">No more random YouTube tutorials. Follow curated paths designed to take you from zero to job-ready, step by step.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-green">⚡</div>
+          <div class="feature-title">Live Coding Labs</div>
+          <div class="feature-desc">Run code right in your browser with our integrated sandboxes. No setup, no excuses — just code.</div>
+        </div>
+        <div class="feature-card wide reveal">
+          <div>
+            <div class="feature-icon icon-red">🔥</div>
+            <div class="feature-title">Real Projects, Real Portfolio</div>
+            <div class="feature-desc">Every course ends with a project you can show employers. Build a portfolio that speaks louder than certificates. Our learners have landed roles at top companies by showcasing their LearnFlow projects.</div>
+          </div>
+          <div class="feature-visual">
+            <div class="fv-line"><span class="fv-kw">const</span>&nbsp;<span class="fv-fn">buildProject</span>&nbsp;= () => {</div>
+            <div class="fv-line">&nbsp;&nbsp;<span class="fv-kw">return</span>&nbsp;{</div>
+            <div class="fv-line">&nbsp;&nbsp;&nbsp;&nbsp;skills:&nbsp;<span class="fv-str">"React, APIs"</span>,</div>
+            <div class="fv-line">&nbsp;&nbsp;&nbsp;&nbsp;lines:&nbsp;<span class="fv-num">1200</span>,</div>
+            <div class="fv-line">&nbsp;&nbsp;&nbsp;&nbsp;result:&nbsp;<span class="fv-str">"hired ✓"</span></div>
+            <div class="fv-line">&nbsp;&nbsp;}</div>
+            <div class="fv-line">}</div>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-blue">🤝</div>
+          <div class="feature-title">Community & Mentorship</div>
+          <div class="feature-desc">Get unstuck fast. Join Discord, book 1:1 mentor sessions, and learn alongside thousands of peers.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-purple">📱</div>
+          <div class="feature-title">Learn Anywhere</div>
+          <div class="feature-desc">Fully responsive platform. Download lessons for offline access. Learn on your terms, on any device.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testimonials-header reveal">
+      <p class="section-label">Student Stories</p>
+      <h2 class="section-title">Loved by thousands of learners</h2>
+      <p class="section-sub">Don't take our word for it — here's what our community says.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"LearnFlow's React course is the most practical I've ever taken. Got my first dev internship 3 months after completing it."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av1">A</div>
+          <div><div class="testi-name">Ananya Singh</div><div class="testi-role">Frontend Intern @ Razorpay</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The live coding labs are a game changer. I used to dread setting up environments. Now I just focus on actually coding."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av2">R</div>
+          <div><div class="testi-name">Rohan Kapoor</div><div class="testi-role">Full Stack Developer</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The community here is incredible. Got feedback on my portfolio within hours and landed 3 interview calls the same week."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av3">P</div>
+          <div><div class="testi-name">Priya Nair</div><div class="testi-role">UI Developer @ Flipkart</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-inner reveal">
+      <h2 class="cta-title">Start building your future today</h2>
+      <p class="cta-sub">Join 50,000+ learners. Your first course is free — no credit card needed.</p>
+      <div class="cta-actions">
+        <a href="signup.html" class="btn-primary">Get Started Free →</a>
+        <a href="demo.html" class="btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#hero" class="logo">Learn<span class="logo-dot">Flow</span></a>
+    <ul class="footer-links">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 LearnFlow. Made with ♥</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
